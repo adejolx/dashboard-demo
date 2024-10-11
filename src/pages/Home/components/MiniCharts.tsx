@@ -5,7 +5,7 @@ import Card from '@/ui/Card'
 
 const MiniCharts = () => {
   return (
-    <div className="flex flex-wrap items-center gap-3 *:grow *:basis-[calc((24rem_-100%)*_999)] *:animate-enter-top *:[animation-delay:calc(var(--enter-delay)_*_75ms)]">
+    <div className="flex flex-wrap gap-3 *:grow *:basis-[calc((50rem_-_100%)_*_999)] *:animate-enter-top *:[animation-delay:calc(var(--enter-delay)_*_75ms)]">
       {arrayOfThreeItems.map((_, index) => (
         <Card
           style={{

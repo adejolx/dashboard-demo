@@ -10,14 +10,14 @@ import ProductAlertsList from './components/ProductAlertsList'
 const Home = () => {
   return (
     <div className="py-20 space-y-8">
-      <div className="flex wrap justify-between items-center">
+      <div className="flex flex-wrap gap-4 justify-between items-center">
         <ToggleGroup type="single">
           <ToggleGroupItem value="year">Year</ToggleGroupItem>
           <ToggleGroupItem value="30_days">30 days</ToggleGroupItem>
           <ToggleGroupItem value="7_days">7 days</ToggleGroupItem>
           <ToggleGroupItem value="today">Today</ToggleGroupItem>
         </ToggleGroup>
-        <div className="flex wrap gap-2">
+        <div className="flex flex-wrap gap-2">
           <Button>
             <Calendar />
             <span>Select dates</span>
@@ -31,7 +31,7 @@ const Home = () => {
 
       <div className="space-y-6">
         <MiniCharts />
-        <div className="flex flex-wrap gap-3 *:grow *:basis-[calc((24rem_-100%)*_999)]">
+        <div className="flex flex-wrap gap-3 *:grow *:basis-[calc((50rem_-_100%)_*_999)]">
           <TopSellingProductsList />
           <ProductAlertsList />
         </div>
