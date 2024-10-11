@@ -11,7 +11,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className="rounded-2xl bg-[#F2F2F2] border border-[#B2B2B2] min-w-[20rem]"
+      className="rounded-2xl bg-[#F2F2F2] border border-[#B2B2B2] w-auto overflow-x-auto"
       style={style}
     >
       <p className="p-2.5 font-medium text-lg -tracking-[0.9px]">{title}</p>

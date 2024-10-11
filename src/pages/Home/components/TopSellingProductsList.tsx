@@ -4,29 +4,26 @@ import { soldProductProps } from '@/data'
 const TopSellingProductsList = () => {
   return (
     <Card title="Top Selling Products">
-      <div className="space-y-2.5 px-2.5 py-1.5">
-        <div className="flex justify-between text-base items-center text-[#666]">
-          <span>Product Name</span>
-          <span>Number Sold</span>
-        </div>
-        <div className="space-y-2.5 *:text-[#1A1A1A]">
-          {soldProductProps.map((prop, index) => (
-            <div className="flex text-xs font-medium items-center justify-between *:animate-grow-to-right *:[animation-delay:calc(var(--grow-delay)_*_75ms)]">
-              <div
-                style={{
-                  ['--grow-delay' as string]: index,
-                  width: prop.width,
-                  backgroundColor: prop.bgColor,
-                  color: prop.color,
-                }}
-                className="px-3.5 py-1.5 rounded-lg bg-[#D6DDFF]"
-              >
-                Big Boyz meal
-              </div>
-              <div className="text-right">1001 units</div>
+      <div className="gap-y-2.5 px-2.5 py-1.5 grid grid-cols-[minmax(300px,_1fr)_max-content] overflow-x-auto text-base text-[#666]">
+        <span className="mb-1">Product Name</span>
+        <span className="mb-1">Number Sold</span>
+
+        {soldProductProps.map((prop, index) => (
+          <>
+            <div
+              style={{
+                ['--grow-delay' as string]: index,
+                width: prop.width,
+                backgroundColor: prop.bgColor,
+                color: prop.color,
+              }}
+              className="px-3.5 py-1.5 rounded-lg bg-[#D6DDFF] !text-[#1A1A1A] whitespace-nowrap overflow-hidden text-ellipsis"
+            >
+              Big Boyz meal
             </div>
-          ))}
-        </div>
+            <div className="text-right !text-[#1A1A1A]">1001 units</div>
+          </>
+        ))}
       </div>
     </Card>
   )

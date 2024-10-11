@@ -3,6 +3,7 @@ import Card from '@/ui/Card'
 import StockLevel from '@/ui/StockLevel'
 import AlertLevel from '@/ui/AlertLevel'
 import { stockLevels } from '@/data'
+import React from 'react'
 
 const ProductAlertsList = () => {
   return (
@@ -13,28 +14,28 @@ const ProductAlertsList = () => {
         </div>
       }
     >
-      <div className="space-y-2.5 divide-y divide-[#CCC] px-2.5 py-1.5">
-        <div className="flex flex-wrap items-center gap-3 *:grow *:basis-[calc((24rem_-100%)*_999)] text-base text-[#666]">
-          <span>Product Name</span>
-          <span className="text-center">Stock Level(%)</span>
-          <span className="text-right">Restock Alert</span>
-        </div>
-        <div className="space-y-2.5 py-2.5 *:text-[#666]  *:animate-enter-top *:[animation-delay:calc(var(--enter-delay)_*_75ms)]">
-          {stockLevels.map((level, index) => (
-            <div
-              style={{
-                ['--enter-delay' as string]: index,
-              }}
-              className="flex flex-wrap items-center gap-3 *:grow *:basis-[calc((24rem_-100%)*_999)] text-base"
-            >
-              <div>White Dress Shirts</div>
+      <div className="gap-y-2.5 px-2.5 py-1.5 grid grid-cols-[minmax(200px,_1fr)_max-content_200px] overflow-x-auto">
+        <span className="text-base text-[#666]">Product Name</span>
+        <span className="text-center text-base text-[#666]">
+          Stock Level(%)
+        </span>
+        <span className="text-right text-base text-[#666]">Restock Alert</span>
+
+        <hr className="bg-[#CCC] my-1.5" />
+        <hr className="bg-[#CCC] my-1.5" />
+        <hr className="bg-[#CCC] my-1.5" />
+
+        {stockLevels.map((level, index) => (
+          <React.Fragment key={index}>
+            <div className="text-base">White Dress Shirts</div>
+            <div className="text-base">
               <StockLevel level={level} />
-              <div className="text-right">
-                <AlertLevel level={level} />
-              </div>
             </div>
-          ))}
-        </div>
+            <div className="text-right text-base">
+              <AlertLevel level={level} />
+            </div>
+          </React.Fragment>
+        ))}
       </div>
     </Card>
   )

@@ -31,7 +31,7 @@ const Home = () => {
 
       <div className="space-y-6">
         <MiniCharts />
-        <div className="flex flex-wrap gap-3 *:grow *:basis-[calc((50rem_-_100%)_*_999)]">
+        <div className="grid grid-cols-[repeat(auto-fit,_minmax(min(24rem,_100%),_1fr))] gap-3">
           <TopSellingProductsList />
           <ProductAlertsList />
         </div>
