@@ -8,8 +8,8 @@ import AccountAndNotifications from './AccountAndNotifications'
 
 const Header = () => {
   return (
-    <header className="bg-white border border-[#D9D9D9] shadow-header">
-      <div className="relative bounds flex items-center justify-between gap-[166px] p-4">
+    <header className="bg-white border border-[#D9D9D9] shadow-header sticky top-0 z-10">
+      <div className="relative bounds flex items-center justify-between md:gap-[166px] p-4">
         <nav className="flex gap-[268px] items-center justify-between">
           <Link to="#" className="p-0 -ml-[22px]">
             <Logo />

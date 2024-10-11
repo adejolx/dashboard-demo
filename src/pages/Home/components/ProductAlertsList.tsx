@@ -14,11 +14,9 @@ const ProductAlertsList = () => {
         </div>
       }
     >
-      <div className="gap-y-2.5 px-2.5 py-1.5 grid grid-cols-[minmax(200px,_1fr)_max-content_200px] overflow-x-auto">
+      <div className="w-full gap-y-2.5 px-2.5 py-1.5 grid grid-cols-[minmax(200px,_1fr)_minmax(max-content,_0.5fr)_minmax(200px,_1fr)] overflow-x-auto items-center">
         <span className="text-base text-[#666]">Product Name</span>
-        <span className="text-center text-base text-[#666]">
-          Stock Level(%)
-        </span>
+        <span className="text-base text-[#666]">Stock Level(%)</span>
         <span className="text-right text-base text-[#666]">Restock Alert</span>
 
         <hr className="bg-[#CCC] my-1.5" />
@@ -28,10 +26,10 @@ const ProductAlertsList = () => {
         {stockLevels.map((level, index) => (
           <React.Fragment key={index}>
             <div className="text-base">White Dress Shirts</div>
-            <div className="text-base">
+            <div className="text-sm">
               <StockLevel level={level} />
             </div>
-            <div className="text-right text-base">
+            <div className="text-right text-xs">
               <AlertLevel level={level} />
             </div>
           </React.Fragment>

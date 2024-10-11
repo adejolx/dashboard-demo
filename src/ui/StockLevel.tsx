@@ -7,11 +7,10 @@ const StockLevel = ({ level }: { level: number }) => {
   const numberOfFilledBars = Math.ceil((level / 100) * NUM_OF_BARS)
 
   return (
-    <div className="flex justify-center gap-1.5">
+    <div className="flex gap-1.5">
       <div
         className={cn(
-          'stock-level flex justify-center items-center gap-1.5 *:inline-block *:rounded-[2px] *:w-2.5 *:h-5',
-          level === 0 && '-ml-2'
+          'stock-level flex justify-center items-center gap-1.5 *:inline-block *:rounded-[2px] *:w-2.5 *:h-5'
         )}
       >
         {Array(6)

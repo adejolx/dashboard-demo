@@ -17,11 +17,11 @@ const TopSellingProductsList = () => {
                 backgroundColor: prop.bgColor,
                 color: prop.color,
               }}
-              className="px-3.5 py-1.5 rounded-lg bg-[#D6DDFF] !text-[#1A1A1A] whitespace-nowrap overflow-hidden text-ellipsis"
+              className="text-sm px-3.5 py-1.5 rounded-lg bg-[#D6DDFF] !text-[#1A1A1A] whitespace-nowrap overflow-hidden text-ellipsis"
             >
               Big Boyz meal
             </div>
-            <div className="text-right !text-[#1A1A1A]">1001 units</div>
+            <div className="text-sm text-right !text-[#1A1A1A]">1001 units</div>
           </>
         ))}
       </div>

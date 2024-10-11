@@ -43,6 +43,10 @@
     --radius: 0.5rem;
   }
 
+  html {
+    @apply scroll-smooth focus:scroll-auto;
+  }
+
   body,
   #root {
     margin: 0;
@@ -93,7 +97,6 @@
 
 @layer utilities {
   .bounds {
-    min-width: 320px;
     max-width: 1440px;
     margin-inline: auto;
     padding-inline: 17px;
