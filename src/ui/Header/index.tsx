@@ -11,7 +11,7 @@ const Header = () => {
     <header className="bg-white border border-[#D9D9D9] shadow-header">
       <div className="relative bounds flex items-center justify-between gap-[166px] p-4">
         <nav className="flex gap-[268px] items-center justify-between">
-          <Link to="#" className="p-0">
+          <Link to="#" className="p-0 -ml-[22px]">
             <Logo />
           </Link>
 
